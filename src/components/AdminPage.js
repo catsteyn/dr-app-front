@@ -11,7 +11,7 @@ const AdminPage = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/appointments"
+          "https://still-ridge-22676-02c6e375dc3c.herokuapp.com/api/appointments"
         );
         setAppointments(response.data);
       } catch (error) {
@@ -55,7 +55,7 @@ const AdminPage = () => {
         appointment.patient = inputs[2].value;
 
         await axios.patch(
-          `http://localhost:5000/api/appointments/${appointment._id}`,
+          `https://still-ridge-22676-02c6e375dc3c.herokuapp.com/api/appointments/${appointment._id}`,
           appointment
         );
 
@@ -71,7 +71,9 @@ const AdminPage = () => {
   // Function to delete an appointment
   const deleteAppointment = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/appointments/${id}`);
+      await axios.delete(
+        `https://still-ridge-22676-02c6e375dc3c.herokuapp.com/api/appointments/${id}`
+      );
       // Remove the deleted appointment from the appointments list
       setAppointments(
         appointments.filter((appointment) => appointment._id !== id)

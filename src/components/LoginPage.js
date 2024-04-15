@@ -31,7 +31,7 @@ const LoginPage = () => {
     try {
       // Send login data to backend for authentication
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://still-ridge-22676-02c6e375dc3c.herokuapp.com/api/auth/login",
         loginData
       );
       const { password } = loginData;
@@ -56,7 +56,7 @@ const LoginPage = () => {
     try {
       // Send signup data to backend for registration
       const response = await axios.post(
-        "http://localhost:5000/api/auth/signup",
+        "https://still-ridge-22676-02c6e375dc3c.herokuapp.com/api/auth/signup",
         signupData
       );
       console.log(response.data); // Log response data for success

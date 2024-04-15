@@ -13,7 +13,7 @@ const ClientPage = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/appointments"
+          "https://still-ridge-22676-02c6e375dc3c.herokuapp.com/api/appointments"
         );
         setAppointments(response.data);
       } catch (error) {
@@ -65,7 +65,7 @@ const ClientPage = () => {
 
       // Send new appointment data to backend
       await axios.post(
-        "http://localhost:5000/api/appointments",
+        "https://still-ridge-22676-02c6e375dc3c.herokuapp.com/api/appointments",
         newAppointment
       );
 

@@ -28,11 +28,14 @@ const OAuth = () => {
       // Sign in with Google popup window
       const resultsFromGoogle = await signInWithPopup(auth, provider);
       // Send Google user data to backend for authentication
-      const res = await axios.post("http://localhost:5000/api/auth/google", {
-        name: resultsFromGoogle.user.displayName,
-        email: resultsFromGoogle.user.email,
-        googlePhotoUrl: resultsFromGoogle.user.photoURL,
-      });
+      const res = await axios.post(
+        "https://still-ridge-22676-02c6e375dc3c.herokuapp.com/api/auth/google",
+        {
+          name: resultsFromGoogle.user.displayName,
+          email: resultsFromGoogle.user.email,
+          googlePhotoUrl: resultsFromGoogle.user.photoURL,
+        }
+      );
       const data = res.data; // Extract user data from response
       // If authentication is successful, dispatch loginSuccess action and navigate to client page
       if (res.status === 200) {
@@ -55,11 +58,14 @@ const OAuth = () => {
       // Sign in with Facebook popup window
       const resultsFromFacebook = await signInWithPopup(auth, provider);
       // Send Facebook user data to backend for authentication
-      const res = await axios.post("http://localhost:5000/api/auth/facebook", {
-        name: resultsFromFacebook.user.displayName,
-        email: resultsFromFacebook.user.email,
-        facebookPhotoUrl: resultsFromFacebook.user.photoURL,
-      });
+      const res = await axios.post(
+        "https://still-ridge-22676-02c6e375dc3c.herokuapp.com/api/auth/facebook",
+        {
+          name: resultsFromFacebook.user.displayName,
+          email: resultsFromFacebook.user.email,
+          facebookPhotoUrl: resultsFromFacebook.user.photoURL,
+        }
+      );
       const data = res.data; // Extract user data from response
       // If authentication is successful, dispatch loginSuccess action and navigate to client page
       if (res.status === 200) {

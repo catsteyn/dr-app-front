@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:5000",
+  "proxy": "https://still-ridge-22676-02c6e375dc3c.herokuapp.com/",
   "dependencies": {
     "@reduxjs/toolkit": "^2.2.3",
     "@testing-library/user-event": "^13.5.0",
@@ -63,5 +63,5 @@
     "moduleNameMapper": {
       "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
     }
-}
+  }
 }
