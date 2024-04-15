@@ -1,38 +1,205 @@
-.App {
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f1f1f1;
+}
+
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styles */
+.form {
+  width: 45%;
+  padding: 20px;
+  border-radius: 50px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin: 0 30px;
+}
+
+.form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form input[type="text"],
+.form input[type="password"],
+.form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.form button {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: grey;
+}
+
+.form button.google,
+.form button.facebook {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  color: #333;
+}
+
+.google img {
+  width: 20px;
+  height: 20px;
+  padding-right: 10px;
+  vertical-align: text-bottom;
+}
+
+.facebook img {
+  width: 18px;
+  height: 18px;
+  padding-right: 10px;
+  vertical-align: text-bottom;
+}
+
+.form button.google:hover,
+.form button.facebook:hover {
+  background-color: #f1f1f1;
+}
+
+/* Heading styles */
+h1 {
+  margin-bottom: 50px;
+  font-size: 50px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  margin-top: 50px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Paragraph styles */
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Client and Admin container styles */
+.client-container,
+.admin-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-around;
+  width: 90%;
+  max-width: 900px;
+  background-color: #fff;
+  border-radius: 50px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.App-link {
-  color: #61dafb;
+/* Table styles */
+table {
+  width: 100%;
+  margin-top: 10px;
+  border-collapse: collapse;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+th,
+td {
+  padding: 25px;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Button styles */
+button {
+  background-color: black;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: grey;
+}
+
+/* Popup container styles */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Popup content styles */
+.popup-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 50px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#app-button {
+  width: 80%;
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+/* Close button styles */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Hidden input field styles */
+input[type="text"].hidden {
+  display: none;
 }

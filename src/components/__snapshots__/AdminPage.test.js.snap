@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders AdminPage correctly 1`] = `
+<div>
+  <div
+    class="admin-container"
+  >
+    <h1>
+      Welcome Doctor
+    </h1>
+    <h2>
+      Your appointments today
+    </h2>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            Time
+          </th>
+          <th>
+            Appointment Reason
+          </th>
+          <th>
+            Patient Name
+          </th>
+          <th>
+            Action
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
